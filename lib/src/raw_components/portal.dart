@@ -178,7 +178,7 @@ class _ShadPortalState extends State<ShadPortal> {
     if (anchor.followTargetOnResize) {
       MediaQuery.sizeOf(context);
     }
-    final overlayState = Overlay.of(context, debugRequiredFor: widget);
+    final overlayState = Overlay.of(context, debugRequiredFor: widget, rootOverlay: true);
     final box = this.context.findRenderObject()! as RenderBox;
     final target = box.localToGlobal(
       box.size.center(Offset.zero),
